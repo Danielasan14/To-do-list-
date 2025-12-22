@@ -1,0 +1,55 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #e7f8f6, #ffffff);
+}
+
+.Icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #4C585B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fefefe;
+    background:#7E99A3 ;
+}
+
+.Icon-check {
+    position: absolute;
+    left: 12px;
+}
+
+.Icon-check--active {
+    background: #5fc3b9;
+    color: #fefefe;
+    border: 2px solid #5fc3b9;
+}
+
+.todo-delete {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    color: #d9534f;
+    transition: transform 0.2s ease;
+}
+
+.todo-delete:hover {
+    transform: scale(1.2);
+}
+
+.todo-text {
+    font-size: 16px;
+    color: #2f6f6a;
+}
+
+.todo-text--complete {
+    text-decoration: line-through;
+}
