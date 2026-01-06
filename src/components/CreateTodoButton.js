@@ -1,8 +1,8 @@
 const buttonStyle = {
     width: '56px',
-    position: 'fixed',
-    right: '30px',
     height: '56px',
+    position: 'fixed',
+    right: '350px',   
     borderRadius: '50%',
     border: '2px solid #5fc3b9',
     alignItems: 'center',

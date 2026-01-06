@@ -7,16 +7,44 @@ import { CreateTodoButton } from './components/CreateTodoButton';
 import React from 'react';
 
 
-const defaultTodos = [
-  { text: 'Terminar curso de react', completed: false },
-  { text: 'Enviar todos los trabajos', completed: false },
-  { text: 'Organizar mi habitación', completed: false },
-  { text: 'pagar el internet', completed: true },
-  { text: 'Comprar galletas', completed: false },
-]
+// const defaultTodos = [
+//   { text: 'Terminar curso de react', completed: false },
+//   { text: 'Enviar todos los trabajos', completed: false },
+//   { text: 'Organizar mi habitación', completed: false },
+//   { text: 'pagar el internet', completed: true },
+//   { text: 'Comprar galletas', completed: false },
+// ]
+
+// localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
+// localStorage.removeItem('TODOS_V1');
 //Este es el componente "App"
+
+function useLocalStorage(itemName, initialValue) {
+
+  const localStorageItem = localStorage.getItem(itemName);
+
+  let parsedItem;
+
+  if (!localStorageItem) {
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
+    parsedItem = initialValue;
+
+  } else {
+    parsedItem = JSON.parse(localStorageItem);
+  }
+
+  const [item, setItem] = React.useState(parsedItem)
+
+  //aqui se van a guardar los todos en el localStorage
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemName, JSON.stringify(newItem));
+    setItem(newItem);
+  };
+  return [item, saveItem];
+}
+
 function App() {
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
   const [
     searchValue,  //valor actual
     setsearchValue //funcion para cambiar el valor actual   
@@ -34,7 +62,7 @@ function App() {
 
     );
     newTodos[todoIndex].completed = true;
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   const deleteTodo = (text) => {
@@ -43,7 +71,7 @@ function App() {
 
     );
     newTodos.splice(todoIndex, 1);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
   return (  //este ya no es un componente, es lo que nos retorna, los elementos internos del componente
     <>
@@ -58,7 +86,7 @@ function App() {
             text={todo.text}
             completed={todo.completed}
             onComplete={() => completeTodo(todo.text)}
-            onDelete = {() => deleteTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
           />
         ))}
       </TodoList >
