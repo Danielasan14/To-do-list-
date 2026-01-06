@@ -1,12 +1,21 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: #DFF2EB;
-    color: black;
-    font-family: 'Monserrat', Arial, Arial, Helvetica, sans-serif ;
+  margin: 0;
+  padding: 0;
+  background-image: url("/public/img/background-todo-list.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: black;
+  font-family: 'Monserrat', Arial, Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 600px;
+  margin: 50px auto 0 auto;
+  border-radius: 30px;
+  background: #1A1625;
+  box-shadow:
+    5px 5px 22px rgba(238, 17, 124, 0.25),
+    5px 5px 30px rgba(245, 0, 123, 0.15);
 }

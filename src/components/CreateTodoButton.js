@@ -1,16 +1,17 @@
 const buttonStyle = {
-    width: '56px',
-    height: '56px',
-    position: 'fixed',
-    right: '350px',   
+    width: '70px',
+    height: '70px',
+    position: 'relative',
+    left: '550px',
+    top: '110px',
     borderRadius: '50%',
-    border: '2px solid #5fc3b9',
+    border: '2px solid #D91656',
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
     color: 'white',
-    background: ' #5fc3b9',
-    fontSize: '28px',
+    background: '#D91656',
+    fontSize: '30px',
 }
 
 function CreateTodoButton() {
