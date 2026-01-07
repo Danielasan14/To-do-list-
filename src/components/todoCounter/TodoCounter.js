@@ -1,5 +1,7 @@
 
 import './TodoCounter.css'
+import { CircularInput, } from 'react-circular-input';
+
 
 function TodoCounter({ total, completed }) {
     return (
@@ -7,7 +9,9 @@ function TodoCounter({ total, completed }) {
             <h1>
                 Has completado {completed} de {total} TODOS
             </h1>
-            <input type='range' min="0" max={total} value={completed} readOnly></input>
+            <CircularInput
+                max={total} value={completed} readOnly>
+            </CircularInput>
         </div>
     );
 }

@@ -8,25 +8,25 @@
 .search-input {
     font-family: Arial, sans-serif;
     text-align: center;
-    border: 1px solid #ccc;
+    border: solid 1px  #FF204E ;
     border-radius: 8px;
-    border-color: #00B7B5;
+    background: #0b0b14;
     border-width: 2px;
-    background: rgba(220, 245, 242, 0.7);
+    color: #B6B0C3;
     backdrop-filter: blur(6px);
     width: 320px;
     height: 30px;
 }
 
 .search-input:focus {
-    outline-color: #3bbdb1;
+    background: #0b0b14;
     box-shadow:
-        0 0 8px rgba(59, 189, 177, 0.6),
-        0 0 16px rgba(59, 189, 177, 0.3);
+        0 0 12px rgba(255, 46, 147, 0.25),
+        0 0 30px rgba(0, 245, 212, 0.15);
 }
 
 .search-input::placeholder {
-    color: #7fbfb9;
+    color: #B6B0C3;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 

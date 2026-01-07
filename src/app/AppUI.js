@@ -1,11 +1,11 @@
-import { TodoCounter } from './components/todoCounter/TodoCounter';
-import { TodoSearch } from './components/todoSearch/TodoSearch';
-import { TodoList } from './components/todoList/TodoList';
-import { TodoItem } from './components/todoItem/TodoItem';
-// import { TodosLoading } from './components/to';
-// import { TodosError } from './components';
-// import { EmptyTodos } from './components';
-import { CreateTodoButton } from './components/CreateTodoButton';
+import { TodoCounter } from '../components/todoCounter/TodoCounter';
+import { TodoSearch } from '../components/todoSearch/TodoSearch';
+import { TodoList } from '../components/todoList/TodoList';
+import { TodoItem } from '../components/todoItem/TodoItem';
+import { TodosLoading } from '../todosLoading/TodosLoading';
+import { TodosError } from '../TodosError';
+import { EmptyTodos } from '../EmptyTodos';
+import { CreateTodoButton } from '../components/CreateTodoButton';
 
 function AppUI({
     loading,
@@ -19,7 +19,7 @@ function AppUI({
     deleteTodo,
 }) {
     return (
-        <>
+        <div className='container'>
             <TodoCounter
                 completed={completedTodos}
                 total={totalTodos}
@@ -28,7 +28,6 @@ function AppUI({
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
             />
-
             <TodoList>
                 {loading && (
                     <>
@@ -52,7 +51,7 @@ function AppUI({
             </TodoList>
 
             <CreateTodoButton />
-        </>
+        </div>
     );
 }
 

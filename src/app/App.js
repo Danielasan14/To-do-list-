@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { AppUI } from './AppUI';
+import { AppUI } from '../app/AppUI';
 import { useLocalStorage } from './useLocalStorage';
 
 // localStorage.removeItem('TODOS_V1');
@@ -31,7 +30,7 @@ function App() {
 
   const searchedTodos = todos.filter(
     (todo) => {
-      const todoText = todo.text.toLowerCase();
+      const todoText = todo.text?.toLowerCase() || '';
       const searchText = searchValue.toLowerCase();
       return todoText.includes(searchText);
     }
