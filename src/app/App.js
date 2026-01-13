@@ -22,6 +22,7 @@ function App() {
     error,
   } = useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
+  
 
   const completedTodos = todos.filter(
     todo => !!todo.completed
@@ -53,7 +54,8 @@ function App() {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
-  
+
+
   return (
     <AppUI
       loading={loading}

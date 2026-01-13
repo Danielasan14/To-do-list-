@@ -37,7 +37,7 @@ function App() {
     return (
         <div>
             <h1>Ejemplo de Props</h1>
-            <Saludo nombre="Mundo" /> 
+            <Saludo nombre="Mundo" />
             <Saludo nombre="Visitante" />
         </div>
     );
@@ -51,9 +51,9 @@ hacen que la interfaz se vuelva a renderizar automáticamente.*/
 const [searchValue, setSearchValue] = useState('');
 
 // Conexión del estado con el valor de un input
-<input 
-  value={searchValue} 
-  onChange={(event) => setSearchValue(event.target.value)} 
+<input
+    value={searchValue}
+    onChange={(event) => setSearchValue(event.target.value)}
 />
 
 /* USESTATE: permite guardar y cambiar datos dentro de un componente,

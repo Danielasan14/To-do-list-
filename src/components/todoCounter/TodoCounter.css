@@ -19,3 +19,9 @@ h1 {
     cursor: default;
     border-radius: 6px;
 }
+
+.circular-input-label {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
