@@ -12,15 +12,19 @@ const buttonStyle = {
     color: 'white',
     background: '#D91656',
     fontSize: '30px',
+    zIndex: '100',
 }
 
-function CreateTodoButton() {
+function CreateTodoButton({ setOpenModal }) {
     return (
         <button style={buttonStyle} 
-        onClick={(event)=> {
-            console.log('le diste click')
-            console.log(event.target)}
-        }>+</button>
+            
+            onClick={
+                () => {
+                    setOpenModal(state => !state);
+                }
+            }
+        >+</button>
     );
 }
-export { CreateTodoButton }; //esto es un export nombrado devuele en obgetox
+export { CreateTodoButton }; //esto es un export nombrado devuele en obgeto

@@ -65,3 +65,16 @@ estados derivados */
 Esto significa que la información guardada no se pierde incluso si se cierra la pestaña, 
 el navegador o el computador. Cuando volvamos a abrir la aplicación, los datos estarán allí.
 - solo se pueden guardar string */
+
+/* REACT CONTEXT, puedes guardar datos que necesitan ser compartidos entre diferentes componentes de tu aplicación
+en una "biblioteca compartida" (el contexto de React), lo que facilita el acceso a estos datos 
+desde cualquier lugar de tu aplicación sin tener que pasarlos manualmente a través de múltiples niveles de componentes.
+
+<TodoContext.Consumer>. siempre espera una funcion y en la funcion se reciben las propiedades que estamos necesitanto*/
+
+/*REACT PORTALS:Para implementar Portals en un proyecto React primero se debe crear un nodo HTML adicional en el archivo index.html.
+Este nodo será el destino al que se teletransportará el contenido del componente. La implementación típica requiere las siguientes acciones:
+Crear el nodo en HTML: Añadir un div con un ID único al archivo index.html. Por ejemplo <div id="modal"></div>.
+Uso de react-dom.createPortal: Dentro del componente, usar react-dom.createPortal para definir qué contenido será teletransportado y a qué nodo HTML.
+
+*/ 
