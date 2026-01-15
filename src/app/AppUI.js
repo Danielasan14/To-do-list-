@@ -9,7 +9,7 @@ import { EmptyTodos } from '../EmptyTodos';
 import { CreateTodoButton } from '../components/CreateTodoButton';
 import { TodoContext } from '../TodoContext';
 import { Modal } from '../components/modal/TodoOpenModal';
-
+import{TodoForm} from '../components/todoForm/TodoForm'
 function AppUI() {
   const {
     loading,
@@ -81,6 +81,9 @@ function AppUI() {
       />
       {openModal && (
         <Modal>
+          <TodoForm>
+
+          </TodoForm>
         </Modal>
       )}
 

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.TodoForm {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(22, 12, 30, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 40px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 24px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.TodoForm::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 26px;
+    padding: 2px;
+    background: linear-gradient(135deg, #640D5F,
+            #D91656,
+            #EE66A6,
+            #FFEB55);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+label {
+    text-align: center;
+    font-weight: 600;
+    font-size: 26px;
+    color: #ffdae9;
+    margin-bottom: 24px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 0, 124, 0.3);
+}
+
+textarea {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 18px;
+    padding: 16px;
+    height: 120px;
+    width: 100%;
+    outline: none;
+    resize: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+textarea:focus {
+    border-color: #ff9900;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.TodoForm-buttonContainer {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+}
+
+.TodoForm-button {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    flex: 1;
+    height: 52px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.TodoForm-button--cancel {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.TodoForm-button--cancel:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.TodoForm-button--add {
+    background: linear-gradient(90deg, #7033ff, #ff2e63);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 46, 99, 0.4);
+}
+
+.TodoForm-button--add:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(255, 46, 99, 0.6);
+}
+
+.TodoForm-button--add:active {
+    transform: translateY(0) scale(1);
+}

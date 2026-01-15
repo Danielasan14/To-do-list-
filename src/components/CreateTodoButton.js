@@ -27,4 +27,4 @@ function CreateTodoButton({ setOpenModal }) {
         >+</button>
     );
 }
-export { CreateTodoButton }; //esto es un export nombrado devuele en obgeto
+export { CreateTodoButton }; //esto es un export nombrado devuele en objeto
